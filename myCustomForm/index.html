@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/intlTelInput.css">
+    <title>TEST FORM</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            min-width: 100vw;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 500px;
+            width: 90%;
+            justify-content: space-between;
+        }
+        form > * {
+            width: 45%;
+            height: 30px;
+        }
+        input,
+        select,
+        .iti {
+            margin-bottom: 20px;
+            cursor: pointer;
+            height: 30px;
+            max-width: 100%;
+        }
+        .hide {
+            display: none;
+        }
+
+        #currency {
+            text-transform: uppercase;
+        }
+        .sub-form {
+            cursor: pointer;
+        }
+        .sub-form-disabled {
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/">
+        <select name="country" id="country"></select>
+        <select name="currency" id="currency">
+            <option value="USD">usd</option>
+            <option value="EUR">euro</option>
+            <option value="UAH">грн</option>
+        </select>
+        <input type="tel" name="phone" id="phone">
+        <span id="valid-msg" class="hide">✓ Valid</span>
+        <span id="error-msg" class="hide"></span>
+        <!-- <button type="button" class="sub-form">отправить</button> -->
+        <button disabled="disabled" type="button" class="sub-form sub-form-disabled">отправить</button>
+    </form>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/intlTelInput.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
